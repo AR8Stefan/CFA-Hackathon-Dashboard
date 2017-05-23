@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import NewsList from './NewsList';
-import { Panel } from 'react-bootstrap';
+import NewMac from './NewMac';
+// import { Panel } from 'react-bootstrap';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    articles: []
+    articles: [],
+    burgers: []
     }
   };
 
@@ -24,16 +26,27 @@ class App extends Component {
       });
   }
 
+  getNewMac() {
+    const LINK = 'https://cfa-mac-secret-menu.herokuapp.com/macs/api?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRha2FoaXJvc3V6dWtpLm0wMTBAZ21haWwuY29tIiwiaWF0IjoxNDk1NTMxODk1fQ.9GY9toZd5oMUt-OdRyKOUBIxBT18p5-bGMsUconxDz4';
+    axios.get(LINK)
+    .then((response) => {
+      this.setState({ burgers: response.data.burgers});
+   })
+    .catch(function (error) {
+       console.log(error);
+    });
+  }
+
 
   render() {
     return (
       <div>
         <p> Welcome to DonaldBoard! </p>
-        <Panel />
+
         {this.getNewsList()}
-        <Panel header="Panel heading without title">
           <NewsList articles={this.state.articles} />
-        </Panel>
+        {this.getNewMac()}
+          <NewMac burgers={this.state.burgers} />
       </div>
     );
   }
