@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import NewsList from '../NewsListComponent/NewsList';
 import MacList from '../MacListComponent/MacList';
+import MacForm from './MacForm';
 import { Panel, Well, Button, Row } from 'react-bootstrap';
 
 
@@ -47,6 +48,7 @@ class App extends Component {
         <div className="container-fluid  welcomeDiv"><h2> Welcome Mr President!</h2></div>
           <NewsList articles={this.state.articles} />
           <MacList burgers={this.state.burgers} />
+          <MacForm getMacList={ () => this.getMacList() }/>
       </div>
     );
   }

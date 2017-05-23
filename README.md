@@ -32,3 +32,8 @@
   *Stockmarket API  
   *Fusionchart-tools
   *Time allocation  
+
+# Contributors  
+  *[Bandita](https://github.com/Bdita)  
+  *[Stefan](https://github.com/AR8Stefan)  
+  *[Taka](https://github.com/TakahiroSuzukiqq)
