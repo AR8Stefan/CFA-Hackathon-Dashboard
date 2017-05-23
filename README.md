@@ -12,10 +12,10 @@
   * Using Moqups to create wireframes.
   ![Image 1](http://res.cloudinary.com/stefank9/image/upload/v1495579330/Screen_Shot_2017-05-24_at_8.40.40_am_xfllfx.png)
 
-# Function & How to play  
+# Function
   <a href="https://ibb.co/exow0v"><img src="https://preview.ibb.co/hQ8w0v/Screen_Shot_2017_05_24_at_08_21_27.png" alt="Screen_Shot_2017_05_24_at_08_21_27" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />  
 
-   * Implemented news API  
+   * Implemented news API, you can see the latest news
    * Implemented original API using Node.js as backend application
 
 # Installation  
