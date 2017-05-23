@@ -1,0 +1,16 @@
+.newsCarousel {
+  margin:2% 2% 0% 0%;
+}
+  .newsCarousel h4 {
+    text-align: center;
+    margin-bottom: 2.5%;
+  }
+
+.newsLink {
+  color: white;
+}
+
+.newsLink:hover {
+  text-decoration: none;
+  color: white;
+}
