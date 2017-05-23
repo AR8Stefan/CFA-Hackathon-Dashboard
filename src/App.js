@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import NewsList from './NewsList'
+import NewsList from './NewsList';
+import { Panel } from 'react-bootstrap';
+
 
 class App extends Component {
   constructor(props) {
@@ -23,13 +25,15 @@ class App extends Component {
   }
 
 
-
   render() {
     return (
       <div>
         <p> Welcome to DonaldBoard! </p>
+        <Panel />
         {this.getNewsList()}
-        <NewsList articles={this.state.articles} />
+        <Panel header="Panel heading without title">
+          <NewsList articles={this.state.articles} />
+        </Panel>
       </div>
     );
   }
