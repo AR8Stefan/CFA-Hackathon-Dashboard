@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewMac = (props) => {
+const MacList = (props) => {
   return (
     <ul>
        {props.burgers.map((burger, i) => <li key={i}>{burger.name}</li>)}
@@ -8,4 +8,4 @@ const NewMac = (props) => {
   )
 };
 
-export default NewMac;
+export default MacList;

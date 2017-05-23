@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import NewsList from './NewsList';
-import NewMac from './NewMac';
+import MacList from './MacList';
 // import { Panel } from 'react-bootstrap';
 
 
@@ -26,17 +26,16 @@ class App extends Component {
       });
   }
 
-  getNewMac() {
-    const LINK = 'https://cfa-mac-secret-menu.herokuapp.com/macs/api?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRha2FoaXJvc3V6dWtpLm0wMTBAZ21haWwuY29tIiwiaWF0IjoxNDk1NTMxODk1fQ.9GY9toZd5oMUt-OdRyKOUBIxBT18p5-bGMsUconxDz4';
-    axios.get(LINK)
+  getMacList() {
+    const URL = 'https://cfa-mac-secret-menu.herokuapp.com/macs/api?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRha2FoaXJvc3V6dWtpLm0wMTBAZ21haWwuY29tIiwiaWF0IjoxNDk1NTMxODk1fQ.9GY9toZd5oMUt-OdRyKOUBIxBT18p5-bGMsUconxDz4';
+    axios.get(URL)
     .then((response) => {
-      this.setState({ burgers: response.data.burgers});
+      this.setState({ burgers: response.data });
    })
     .catch(function (error) {
        console.log(error);
     });
   }
-
 
   render() {
     return (
@@ -45,8 +44,8 @@ class App extends Component {
 
         {this.getNewsList()}
           <NewsList articles={this.state.articles} />
-        {this.getNewMac()}
-          <NewMac burgers={this.state.burgers} />
+        {this.getMacList()}
+          <MacList burgers={this.state.burgers} />
       </div>
     );
   }
