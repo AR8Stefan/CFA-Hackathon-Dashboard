@@ -35,4 +35,4 @@ class TodoForm extends Component {
 	};
 }
 
-export default MacForm;
+export default TodoForm;
